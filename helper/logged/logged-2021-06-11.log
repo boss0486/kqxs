@@ -1,0 +1,4 @@
+[2021-06-11 11:26:19] [info] buy:[object Object]
+[2021-06-11 11:26:19] [info] buy2: {"areaId":1,"categoryId":"2e5968f9-999d-4a8b-be77-b508b10c53c7","amount":3000,"transactionId":"fx003testt","details":"{}"}
+[2021-06-11 11:29:44] [info] buy1: {"areaId":1,"categoryId":"2e5968f9-999d-4a8b-be77-b508b10c53c7","amount":3000,"transactionId":"fx003testt","details":"{}"}
+[2021-06-11 11:29:44] [info] buy2: {"areaId":1,"categoryId":"2e5968f9-999d-4a8b-be77-b508b10c53c7","amount":3000,"transactionId":"fx003testt","details":"{}"}

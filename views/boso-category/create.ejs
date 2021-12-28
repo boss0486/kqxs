@@ -1,0 +1,48 @@
+<div class="row">
+    <div class="col-md-6">
+        <div class="form-group">
+            <label class="form-label">Tiêu đề:</label>
+            <input id="txtTitle" name="txtTitle" maxlength="50" type="text" class="form-control" value="" />
+            <span id="lblTitle" class="message msg-box"></span>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="form-label">ID dịch vụ:</label>
+                    <input id="txtSevice" name="txtSevice" maxlength="50" type="text" class="form-control" value="" />
+                    <span id="lblService" class="message msg-box"></span>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="form-label">Giá bán:</label>
+                    <input id="txtPrice" name="txtPrice" maxlength="10" type="text" class="form-control" value="0" data-currency="true" />
+                    <span id="lblPrice" class="message msg-box"></span>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-label">Mô tả:</label>
+            <textarea id="txtSummary" name="txtSummary" class="form-control default"></textarea>
+            <span id="lblSummary" class="message msg-box"></span>
+        </div>
+        <div class="form-group">
+            <div class="checkbox clip-check check-primary">
+                <input type="checkbox" id="cbxActive" name="cbxActive" value="1" checked />
+                <label for="cbxActive">
+                Kích hoạt
+                </label>
+            </div>
+            <span id="lblActive" class="message msg-box"></span>
+        </div>
+        <div class="form-group text-right">
+            <a href="/backend/boso-category/index" class="btn btn-info" type="reset">Danh sách</a>
+            <button id="btnReset" data-reset="true" class="btn btn-primary" type="reset">Làm mới</button>
+            <button id="btnCreate" class="btn btn-success" type="button">Tạo mới</button>
+        </div>
+        <div class="form-group">
+            <hr />
+        </div>
+    </div>
+</div>
+<script src="/javascripts/app-boso-category.js"></script>

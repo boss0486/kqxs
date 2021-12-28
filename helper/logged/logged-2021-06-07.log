@@ -1,0 +1,21 @@
+[2021-06-07 05:05:14] [info] 503: Cannot read property 'getHours' of undefined
+[2021-06-07 05:05:26] [info] 503: Cannot read property 'getHours' of undefined
+[2021-06-07 05:06:10] [info] 503: Cannot read property 'getHours' of undefined
+[2021-06-07 05:06:13] [info] 503: Cannot read property 'getHours' of undefined
+[2021-06-07 21:35:29] [info] 200: Order success
+[2021-06-07 21:38:07] [info] 200: Order success
+[2021-06-07 21:39:02] [info] 503: TypeError: this.buyDate is undefined :
+@:1:15
+
+[2021-06-07 21:39:21] [info] 503: TypeError: this.buyDate is undefined :
+@:1:15
+
+[2021-06-07 21:39:23] [info] 503: TypeError: this.buyDate is undefined :
+@:1:15
+
+[2021-06-07 21:41:27] [info] 200: Order success
+[2021-06-07 14:15:59] [info] 503: Cannot read property 'areaId' of undefined
+[2021-06-07 14:17:17] [info] 503: Cannot read property 'areaId' of undefined
+[2021-06-07 14:17:30] [info] 503: Cannot read property 'areaId' of undefined
+[2021-06-07 14:18:46] [info] 503: bosoCategoryId is not defined
+[2021-06-07 14:19:20] [info] 200: Order success

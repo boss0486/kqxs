@@ -1,0 +1,32 @@
+<div class="row">
+    <div class="col-md-10">
+        <div class="form-group">
+            <div class="text-right"><a href="/backend/matched/create" class="btn btn-success">Tạo</a></div>
+        </div>
+        <div class="table-responsive">
+            <table class="table table-striped table-bordered table-hover table-full-width" id="sample_1">
+                <thead>
+                    <tr>
+                        <th class="tbcol-id">#</th>
+                        <th class="tbcol-date">Ngày quay</th>
+                        <th class="tbcol-title">Nhóm bộ số</th>
+                        <th class="tbcol-title">Khu vực</th>
+                        <th class="tbcol-amount">Dự đoán</th>
+                        <th class="tbcol-amount">Kết quả</th>
+                        <th class="tbcol-none">Text</th>
+                        <th class="tbcol-status">T.Thái</th>
+                        <th class="tbcol-action">#</th>
+                    </tr>
+                </thead>
+                <tbody id="tblData"></tbody>
+            </table>
+        </div>
+        <div id="pagination"></div>
+    </div>
+</div>
+<script src="/javascripts/app-matched.js"></script>
+<script>
+    $(document).ready(function() {
+        matchedController.dataList(1);
+    });
+</script>

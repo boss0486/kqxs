@@ -1,0 +1,119 @@
+<% var id="" ; var areaId=0; var categoryId="" ; var value="" ; var kqxs="" ; var textRs="" ; var executionDate="" ; var
+    isChecked="" ; var isMatchedTx="" ; var fValue="" ; if (models.boso!=null) { id=models.boso.id;
+    areaId=models.boso.areaId; categoryId=models.boso.categoryId; value=models.boso.value; kqxs=models.boso.kqxsVal;
+    textRs=models.boso.textRs; fValue=models.boso.fValue; var date=new Date(models.boso.executionDate); var mnth=("0" +
+    (date.getMonth() + 1)).slice(-2); var day=("0" + date.getDate()).slice(-2);
+    executionDate=[day,mnth,date.getFullYear()].join("-"); if (models.boso.isMatched) { isMatchedTx="checked" ; } if
+    (models.boso.enabled) { isChecked="checked" ; } } %>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="form-label">Vùng miền:</label>
+                        <select id="ddlArea" name="ddlArea" class="form-control show-tick">
+                            <option value="0">-chọn-</option>
+                            <% if (models!=null) { models.areaList.forEach(function(element){ var selected="" ;
+                                if(element.areaId==areaId) selected="selected" ; %>
+                                <option value="<%= element.areaId %>" <%=selected %>><%= element.areaName %>
+                                </option>
+                                <% });} %>
+                        </select>
+                        <span id="lblArea" class="message msg-box"></span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="form-label">Nhóm dịch vụ:</label>
+                        <select id="ddlCategory" name="ddlCategory" class="form-control show-tick"
+                            data-live-search="true">
+                            <option value="">-chọn-</option>
+                            <% if (models!=null) { models.bosoCate.forEach(function(element){ var selected="" ;
+                                if(element.id==categoryId) selected="selected" ; %>
+                                <option value="<%= element.id %>" <%=selected %> ><%= element.name %>
+                                </option>
+                                <% });} %>
+                        </select>
+                        <span id="lblCategory" class="message msg-box"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="form-label">Ngày quay:</label>
+                        <input id="txtExecutionDate" name="txtExecutionDate" maxlength="50" type="text"
+                            class="form-control" value="<%=executionDate%>" placeholder="dd-mm-yyyy" disabled />
+                        <span id="lbltxtExecutionDate" class="message msg-box"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <hr>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Kết quả:</label>
+                <input id="txtKqxs" name="txtKqxs" maxlength="255" type="text" class="form-control" value="<%=kqxs%>" />
+                <span id="txtKqxs" class="message msg-box"></span>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Giá trị:</label>
+                <input id="txtValue" name="txtValue" maxlength="255" type="text" class="form-control"
+                    value="<%=value%>" />
+                <span id="lblValue" class="message msg-box"></span>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Giá trị fake:</label>
+                <input id="txtTextrs" name="txtTextrs" maxlength="255" type="text" class="form-control"
+                    value="<%=textRs%>" />
+                <span id="lblTextrs" class="message msg-box"></span>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Kết quả fake:</label>
+                <input id="txtFvalue" name="txtFvalue" maxlength="255" type="text" class="form-control"
+                    value="<%=fValue%>" />
+                <span id="lblFvalue" class="message msg-box"></span>
+            </div>
+
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="form-label">Tình trạng:</label>
+                        <div class="checkbox clip-check check-primary">
+                            <input type="checkbox" id="cbxIsMatched" name="cbxIsMatched" value="1" <%=isMatchedTx%> />
+                            <label for="cbxIsMatched">Trúng</label>
+                        </div>
+                        <span id="lblIsMatched" class="message msg-box"></span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="form-label">Trạng thái:</label>
+                        <div class="checkbox clip-check check-primary">
+                            <input type="checkbox" id="cbxActive" name="cbxActive" value="1" <%=isChecked%> />
+                            <label for="cbxActive">
+                                Kích hoạt
+                            </label>
+                        </div>
+                        <span id="lblActive" class="message msg-box"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <hr />
+            </div>
+            <div class="form-group text-right">
+                <a href="/backend/boso/index" class="btn btn-info" type="reset">Danh sách</a>
+                <button id="btnReset" data-reload="true" class="btn btn-primary" type="reset">Làm mới</button>
+                <button id="btnUpdate" class="btn btn-success" type="button">Cập nhật</button>
+            </div>
+            <div class="form-group">
+                <hr />
+            </div>
+            <input id="txtId" name="txtId" type="hidden" value="<%=id%>" />
+        </div>
+
+    </div>
+    <script src="/javascripts/app-boso.js"></script>

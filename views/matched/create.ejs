@@ -1,0 +1,85 @@
+<div class="row">
+    <div class="col-md-6">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="form-label">Vùng miền:</label>
+                    <select id="ddlArea" name="ddlArea" class="form-control show-tick" data-live-search="true">
+                        <option value="0">-chọn-</option>
+                        <% if (models!= null) {
+                            models.areaList.forEach(function(element){ %>
+                            <option value="<%= element.areaId %>"><%= element.areaName %></option>
+                        <% });} %>
+                    </select>
+                    <span id="lblArea" class="message msg-box"></span>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="form-label">Nhóm dịch vụ:</label>
+                    <select id="ddlCategory" name="ddlCategory" class="form-control show-tick" data-live-search="true">
+                        <option value="">-chọn-</option>
+                        <% if (models!= null) {
+                            models.bosoCate.forEach(function(element){ %>
+                            <option value="<%= element.id %>"><%= element.name %></option>
+                        <% });} %>
+                    </select>
+                    <span id="lblCategory" class="message msg-box"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="form-label">Dự đoán:</label>
+                    <input id="txtValue" name="txtValue" maxlength="50" type="text" class="form-control" value="" disabled />
+                    <span id="lblValue" class="message msg-box"></span>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="form-label">Kết quả:</label>
+                    <input id="txtKqxs" name="txtKqxs" maxlength="50" type="text" class="form-control" value="" />
+                    <span id="txtKqxs" class="message msg-box"></span>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-label">Text:</label>
+            <input id="txtNote" name="txtNote" maxlength="80" type="text" class="form-control" value="" />
+            <span id="lblNote" class="message msg-box"></span>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="form-label">Ngày quay:</label>
+                    <input id="txtExecutionDate" name="txtExecutionDate" maxlength="10" type="text" class="form-control" value="" placeholder="dd-mm-yyyy" />
+                    <span id="lbltxtExecutionDate" class="message msg-box"></span>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="form-label">Trạng thái:</label>
+                    <div class="checkbox clip-check check-primary">
+                        <input type="checkbox" id="cbxActive" name="cbxActive" value="1" checked />
+                        <label for="cbxActive">
+                        Trúng
+                        </label>
+                    </div>
+                    <span id="lblActive" class="message msg-box"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group text-right">
+            <a href="/backend/matched/index" class="btn btn-info" type="reset">Danh sách</a>
+            <button id="btnReset" data-reset="true" class="btn btn-primary" type="reset">Làm mới</button>
+            <button id="btnCreate" class="btn btn-success" type="button">Tạo mới</button>
+        </div>
+        <div class="form-group">
+            <hr />
+        </div>
+    </div>
+</div>
+<script src="/javascripts/app-matched.js"></script>
